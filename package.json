@@ -58,7 +58,9 @@
     "context:periodic": "node scripts/context-pipeline/periodic-update.js",
     "context:schedule": "watch -n 21600 npm run context:periodic",
     "context:view": "node scripts/context-pipeline/context-viewer.js",
-    "test:viewer": "jest tests/context-pipeline/viewer.test.js"
+    "test:viewer": "jest tests/context-pipeline/viewer.test.js",
+    "dashboard": "node scripts/dashboard.js",
+    "dashboard:test": "jest __tests__/dashboard.test.js"
   },
   "dependencies": {
     "csurf": "^1.11.0",
