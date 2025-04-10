@@ -38,7 +38,9 @@
     "monitor:all": "npm run monitor:ai && npm run update-all",
     "ai:example": "node scripts/ai/example-usage.js",
     "ai:report": "node scripts/ai/generate-report.js",
-    "test:ai": "jest tests/ai/ai.test.js"
+    "test:ai": "jest tests/ai/ai.test.js",
+    "test:ai:watch": "jest tests/ai/ai.test.js --watch",
+    "test:ai:coverage": "jest tests/ai/ai.test.js --coverage"
   },
   "dependencies": {
     "csurf": "^1.11.0",
@@ -55,6 +57,7 @@
     "@playwright/test": "^1.51.1",
     "@testing-library/jest-dom": "^6.1.0",
     "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.14",
     "autocannon": "^8.0.0",
     "autoprefixer": "^10.4.16",
     "babel-jest": "^29.7.0",
@@ -64,5 +67,6 @@
     "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5"
-  }
+  },
+  "jest": "{\"testEnvironment\":\"node\",\"testMatch\":[\"**/tests/**/*.test.js\"],\"collectCoverage\":true}"
 }
