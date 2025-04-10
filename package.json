@@ -9,7 +9,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "update-progress": "node scripts/update-progress.js",
-    "monitor": "node scripts/monitoring/docker-health.js"
+    "monitor": "node scripts/monitoring/docker-health.js",
+    "update-dashboard": "node scripts/update-dashboard.js",
+    "update-all": "npm run update-progress && npm run update-dashboard"
   },
   "dependencies": {
     "next": "^14.0.0",

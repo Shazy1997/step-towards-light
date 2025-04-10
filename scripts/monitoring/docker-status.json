@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-04-10T02:50:51.077Z",
+  "timestamp": "2025-04-10T02:52:00.049Z",
   "docker": {
     "status": "active",
     "version": "Docker version 24.0.6, build ed223bc",
@@ -7,8 +7,22 @@
   },
   "containers": {
     "running": 0,
-    "status": {},
-    "resources": {}
+    "status": {
+      "homeassistant": "Exited (0) 2 months ago",
+      "magical_lichterman": "Exited (255) 3 months ago"
+    },
+    "resources": {
+      "homeassistant": {
+        "cpu": "0.00%",
+        "memory": "0B / 0B",
+        "network": "0B / 0B"
+      },
+      "magical_lichterman": {
+        "cpu": "0.00%",
+        "memory": "0B / 0B",
+        "network": "0B / 0B"
+      }
+    }
   },
   "build": {
     "lastBuild": null,

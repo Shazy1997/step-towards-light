@@ -1,11 +1,6 @@
 {
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "update-progress": "node scripts/update-progress.js"
+    "update-dashboard": "node -e 'const fs=require("fs");const content=fs.readFileSync("DASHBOARD.md","utf8");fs.writeFileSync("DASHBOARD.md",content.replace(/\$\((.*?)\)/g,(m,c)=>require("child_process").execSync(c).toString().trim()))'",
+    "update-all": "npm run update-progress && npm run update-dashboard"
   }
 }
