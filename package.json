@@ -60,7 +60,9 @@
     "context:view": "node scripts/context-pipeline/context-viewer.js",
     "test:viewer": "jest tests/context-pipeline/viewer.test.js",
     "dashboard": "node scripts/dashboard.js",
-    "dashboard:test": "jest __tests__/dashboard.test.js"
+    "dashboard:test": "jest __tests__/dashboard.test.js",
+    "status": "node scripts/status.js",
+    "test:status": "jest tests/status.test.js"
   },
   "dependencies": {
     "csurf": "^1.11.0",
