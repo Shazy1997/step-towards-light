@@ -35,7 +35,8 @@
     "ai:analyze": "node -e 'require(\"./scripts/ai/llama_integration\").analyze(process.argv[1])'",
     "monitor:ai": "node scripts/ai/monitor-enhance.js",
     "monitor:continuous": "watch -n 300 npm run monitor:ai",
-    "monitor:all": "npm run monitor:ai && npm run update-all"
+    "monitor:all": "npm run monitor:ai && npm run update-all",
+    "ai:example": "node scripts/ai/example-usage.js"
   },
   "dependencies": {
     "csurf": "^1.11.0",
