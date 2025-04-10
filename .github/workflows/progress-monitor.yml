@@ -1,0 +1,48 @@
+name: Project Progress Monitoring
+
+on: [push, pull_request]
+
+jobs:
+  analyze-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run tests
+        run: npm test
+      
+      - name: Generate analysis report
+        run: |
+          node scripts/repo-analysis/analyze.js
+          
+      - name: Create progress summary
+        run: |
+          echo "## Project Progress Report" > PROGRESS.md
+          echo "Generated: $(date)" >> PROGRESS.md
+          echo "" >> PROGRESS.md
+          echo "### Repository Analysis" >> PROGRESS.md
+          node -e 'const report = require("./scripts/repo-analysis/report.json"); console.log(`
+          - Files: ${report.stats.files}
+          - Directories: ${report.stats.directories}
+          - Size: ${report.stats.totalSize}
+          - Components: ${report.stats.components}
+          - Pages: ${report.stats.pages}
+          - Tests: ${report.stats.tests}
+          `)' >> PROGRESS.md
+          
+      - name: Commit and push if changes exist
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add PROGRESS.md scripts/repo-analysis/report.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: Update progress report [skip ci]" && git push)
+

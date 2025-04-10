@@ -7,7 +7,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "update-progress": "node scripts/update-progress.js"
   },
   "dependencies": {
     "next": "^14.0.0",
