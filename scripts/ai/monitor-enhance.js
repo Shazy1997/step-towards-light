@@ -61,13 +61,16 @@ class AIMonitoringEnhancement {
 
   getDockerMetrics() {
     try {
-      const stats = JSON.parse(execSync('docker stats --no-stream --format "{{json .}}"').toString());
+      const statsOutput = execSync('docker stats --no-stream --format "{{json .}}"').toString();
+      const containers = statsOutput.split('\n')
+        .filter(line => line.trim())
+        .map(line => JSON.parse(line));
       return {
-        containers: stats,
+        containers,
         status: 'active'
       };
     } catch (error) {
-      return { status: 'error', message: error.message };
+      return { status: 'error', message: error.message, containers: [] };
     }
   }
 
@@ -153,8 +156,10 @@ class AIMonitoringEnhancement {
     const issues = [];
 
     // Check Docker container issues
-    if (metrics.docker.status === 'active') {
+    if (metrics.docker.status === 'active' && Array.isArray(metrics.docker.containers)) {
       metrics.docker.containers.forEach(container => {
+        if (!container.MemPerc || !container.CPUPerc) return;
+        
         const memoryUsage = this.parsePercentage(container.MemPerc);
         const cpuUsage = this.parsePercentage(container.CPUPerc);
 
