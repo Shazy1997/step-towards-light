@@ -1,0 +1,98 @@
+name: Update AI Context
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'src/**'
+      - 'config/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'PROGRESS.md'
+      - '.warp_rules/**'
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+
+jobs:
+  update-context:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Fetch all history for all branches and tags
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Generate context
+      run: |
+        npm run context:update
+        echo "Context generated at: $(date)"
+    
+    - name: Run validation
+      run: npm run test:context
+    
+    - name: Update documentation
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        
+        # Generate summary of changes
+        echo "## Context Update Summary" > context-update.md
+        echo "Generated: $(date)" >> context-update.md
+        echo "" >> context-update.md
+        echo "### Recent Changes" >> context-update.md
+        git log -5 --pretty=format:"- %s" >> context-update.md
+        echo "" >> context-update.md
+        echo "### Implementation Status" >> context-update.md
+        cat context/SUMMARY.md >> context-update.md
+        
+        # Update progress files
+        npm run update-all
+        
+        # Commit changes if any
+        git add context/ PROGRESS.md .warp_rules/
+        git diff --staged --quiet || (git commit -m "chore: Update AI context [skip ci]" && git push)
+    
+    - name: Upload context artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: ai-context
+        path: |
+          context/
+          context-update.md
+    
+    - name: Verify context
+      run: |
+        echo "Context verification summary:"
+        node -e "
+          const fs = require('fs');
+          const context = JSON.parse(fs.readFileSync('context/latest.json'));
+          console.log('Mission:', context.project.mission.primary);
+          console.log('Status:', context.monitoring.status);
+          console.log('Features:', {
+            implemented: context.project.features.implemented.length,
+            inProgress: context.project.features.inProgress.length
+          });
+        "
+
+  notify:
+    needs: update-context
+    if: failure()
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Send notification
+      run: |
+        echo "Context update failed. Check the logs for details."
+        # Add your notification logic here (e.g., Discord webhook)
+

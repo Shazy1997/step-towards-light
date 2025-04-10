@@ -54,7 +54,9 @@
     "ai:context": "node scripts/ai/use-context.js",
     "context:update": "node scripts/context-pipeline/context-aggregator.js",
     "context:watch": "watch -n 300 npm run context:update",
-    "test:context": "jest tests/context-pipeline/context.test.js"
+    "test:context": "jest tests/context-pipeline/context.test.js",
+    "context:periodic": "node scripts/context-pipeline/periodic-update.js",
+    "context:schedule": "watch -n 21600 npm run context:periodic"
   },
   "dependencies": {
     "csurf": "^1.11.0",
