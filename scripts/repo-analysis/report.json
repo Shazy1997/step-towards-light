@@ -1,13 +1,13 @@
 {
-  "timestamp": "2025-04-10T02:45:40.475Z",
+  "timestamp": "2025-04-10T02:50:51.076Z",
   "stats": {
-    "files": 28,
-    "directories": 14,
+    "files": 30,
+    "directories": 15,
     "fileTypes": {
       "": 2,
       ".yml": 2,
-      ".md": 3,
-      ".js": 16,
+      ".md": 4,
+      ".js": 17,
       ".json": 3,
       ".tmp": 1,
       ".css": 1
@@ -16,5 +16,23 @@
     "pages": 7,
     "tests": 2,
     "totalSize": "0.36 MB"
+  },
+  "docker": {
+    "timestamp": "2025-04-10T02:50:51.077Z",
+    "docker": {
+      "status": "active",
+      "version": "Docker version 24.0.6, build ed223bc",
+      "daemon": true
+    },
+    "containers": {
+      "running": 0,
+      "status": {},
+      "resources": {}
+    },
+    "build": {
+      "lastBuild": null,
+      "buildTime": null,
+      "status": "unknown"
+    }
   }
 }
