@@ -8,7 +8,8 @@
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
-    "update-progress": "node scripts/update-progress.js"
+    "update-progress": "node scripts/update-progress.js",
+    "monitor": "node scripts/monitoring/docker-health.js"
   },
   "dependencies": {
     "next": "^14.0.0",
