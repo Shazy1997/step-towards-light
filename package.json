@@ -43,7 +43,8 @@
     "test:ai:coverage": "jest tests/ai/ai.test.js --coverage",
     "ai:validate": "node scripts/ai/validate.js",
     "ai:report:daily": "node -e 'require(\"./scripts/ai/reporter\").generateDailyReport()'",
-    "ai:alerts": "node -e 'console.log(require(\"./scripts/ai/alert-manager\").getActiveAlerts())'"
+    "ai:alerts": "node -e 'console.log(require(\"./scripts/ai/alert-manager\").getActiveAlerts())'",
+    "test:alerts": "jest tests/ai/alert-reporter.test.js"
   },
   "dependencies": {
     "csurf": "^1.11.0",
