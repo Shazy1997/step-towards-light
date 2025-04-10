@@ -51,7 +51,9 @@
     "monitor:start": "node scripts/monitor.js",
     "validate": "npm run test:all && npm run monitor:start",
     "context:generate": "node scripts/ai/context-manager.js",
-    "ai:context": "node scripts/ai/use-context.js"
+    "ai:context": "node scripts/ai/use-context.js",
+    "context:update": "node scripts/context-pipeline/context-aggregator.js",
+    "context:watch": "watch -n 300 npm run context:update"
   },
   "dependencies": {
     "csurf": "^1.11.0",
