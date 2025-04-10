@@ -21,9 +21,11 @@
     "docker:all": "scripts/docker-monitoring/warp-commands.sh all",
     "e2e": "cypress run",
     "e2e:open": "cypress open",
-    "test:all": "npm test && npm run e2e",
+    "test:all": "npm test && npm run test:e2e",
     "monitor:load": "node scripts/monitor-load.js",
-    "monitor:production": "npm run monitor:load && npm run update-all"
+    "monitor:production": "npm run monitor:load && npm run test:all && npm run update-all",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "next": "^14.0.0",
@@ -35,6 +37,7 @@
     "@babel/core": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
     "@babel/preset-react": "^7.26.3",
+    "@playwright/test": "^1.51.1",
     "@testing-library/jest-dom": "^6.1.0",
     "@testing-library/react": "^14.0.0",
     "autocannon": "^8.0.0",
