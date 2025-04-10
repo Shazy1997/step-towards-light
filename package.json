@@ -25,7 +25,10 @@
     "monitor:load": "node scripts/monitor-load.js",
     "monitor:production": "npm run monitor:load && npm run test:all && npm run update-all",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "ssl:generate": "mkdir -p config/nginx/certs && openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout config/nginx/certs/privkey.pem -out config/nginx/certs/fullchain.pem",
+    "nginx:validate": "docker run --rm -v /Users/shazyasif/step-towards-light/config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro nginx:latest nginx -t",
+    "nginx:reload": "docker exec nginx-proxy nginx -s reload"
   },
   "dependencies": {
     "csurf": "^1.11.0",
