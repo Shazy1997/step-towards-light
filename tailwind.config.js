@@ -12,4 +12,11 @@ module.exports = {
     },
   },
   plugins: [],
+  // New v4 features
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  experimental: {
+    optimizeUniversalDefaults: true
+  }
 }
