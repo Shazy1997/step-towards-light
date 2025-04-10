@@ -43,19 +43,21 @@ class AlertManager {
     if (!analysis.metrics) return 'info';
 
     const { cpu, memory, errors } = analysis.metrics;
+    const cpuValue = cpu ? parseInt(cpu.replace('%', '')) : 0;
+    const memoryValue = memory ? parseInt(memory.replace('%', '')) : 0;
 
     if (
-      (cpu && parseInt(cpu) > this.thresholds.cpu.critical) ||
-      (memory && parseInt(memory) > this.thresholds.memory.critical) ||
-      (errors && errors > this.thresholds.errors.critical)
+      cpuValue > this.thresholds.cpu.critical ||
+      memoryValue > this.thresholds.memory.critical ||
+      errors > this.thresholds.errors.critical
     ) {
       return 'critical';
     }
 
     if (
-      (cpu && parseInt(cpu) > this.thresholds.cpu.warning) ||
-      (memory && parseInt(memory) > this.thresholds.memory.warning) ||
-      (errors && errors > this.thresholds.errors.warning)
+      cpuValue > this.thresholds.cpu.warning ||
+      memoryValue > this.thresholds.memory.warning ||
+      errors > this.thresholds.errors.warning
     ) {
       return 'warning';
     }
@@ -67,8 +69,11 @@ class AlertManager {
     if (analysis.type) return analysis.type;
     
     if (analysis.metrics) {
-      if (analysis.metrics.cpu > this.thresholds.cpu.warning) return 'cpu_usage';
-      if (analysis.metrics.memory > this.thresholds.memory.warning) return 'memory_usage';
+      const cpuValue = analysis.metrics.cpu ? parseInt(analysis.metrics.cpu.replace('%', '')) : 0;
+      const memoryValue = analysis.metrics.memory ? parseInt(analysis.metrics.memory.replace('%', '')) : 0;
+
+      if (cpuValue > this.thresholds.cpu.warning) return 'cpu_usage';
+      if (memoryValue > this.thresholds.memory.warning) return 'memory_usage';
       if (analysis.metrics.errors > this.thresholds.errors.warning) return 'error_rate';
     }
 
@@ -93,15 +98,24 @@ class AlertManager {
       index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
     }
 
-    index.unshift({
-      id: alert.id,
-      timestamp: alert.timestamp,
-      severity: alert.severity,
-      type: alert.type,
-      status: alert.status
-    });
+    // Ensure index is an array
+    if (!Array.isArray(index)) {
+      index = [];
+    }
 
-    // Keep last 100 alerts in index
+    // Add new alert to beginning of index
+    index = [
+      {
+        id: alert.id,
+        timestamp: alert.timestamp,
+        severity: alert.severity,
+        type: alert.type,
+        status: alert.status
+      },
+      ...index
+    ];
+
+    // Keep last 100 alerts
     if (index.length > 100) {
       index = index.slice(0, 100);
     }
@@ -127,8 +141,6 @@ class AlertManager {
   }
 
   async notifyCritical(alert) {
-    // You can implement different notification methods here
-    // For example, sending to Discord webhook, email, etc.
     console.error('CRITICAL ALERT:', alert.details.assessment);
   }
 
@@ -145,6 +157,10 @@ class AlertManager {
     if (!fs.existsSync(indexPath)) return [];
 
     const index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+    
+    // Ensure index is an array
+    if (!Array.isArray(index)) return [];
+
     return index.filter(alert => alert.status === 'new');
   }
 
