@@ -1,0 +1,1177 @@
+[
+  {
+    "timestamp": "2025-04-10T03:02:44.210Z",
+    "event": {
+      "status": "exec_die",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_die",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "2ea22a3eb8db479799778d6b1b58b91f04a60fc1aa7328c94ffaf63dd5aaa973",
+          "exitCode": "0",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254164,
+      "timeNano": 1744254164208524000
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:44.180Z",
+    "event": {
+      "status": "exec_start: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_start: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "2ea22a3eb8db479799778d6b1b58b91f04a60fc1aa7328c94ffaf63dd5aaa973",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254164,
+      "timeNano": 1744254164173287400
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:44.178Z",
+    "event": {
+      "status": "exec_create: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_create: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "2ea22a3eb8db479799778d6b1b58b91f04a60fc1aa7328c94ffaf63dd5aaa973",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254164,
+      "timeNano": 1744254164172810000
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:34.169Z",
+    "event": {
+      "status": "exec_die",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_die",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "fc63c8c1a2877930a6c817e14602aa3590e6f5e7a699fbc312ec33c307ff3fda",
+          "exitCode": "0",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254154,
+      "timeNano": 1744254154168006400
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:34.123Z",
+    "event": {
+      "status": "exec_start: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_start: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "fc63c8c1a2877930a6c817e14602aa3590e6f5e7a699fbc312ec33c307ff3fda",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254154,
+      "timeNano": 1744254154118908200
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:34.121Z",
+    "event": {
+      "status": "exec_create: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_create: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "fc63c8c1a2877930a6c817e14602aa3590e6f5e7a699fbc312ec33c307ff3fda",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254154,
+      "timeNano": 1744254154118619400
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:24.116Z",
+    "event": {
+      "status": "exec_die",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_die",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "6d3e6d511ea74dd40f6dd4f7adbfb8d0ae0df141717e7101ecd1b1696e835dbe",
+          "exitCode": "0",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254144,
+      "timeNano": 1744254144115169000
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:24.087Z",
+    "event": {
+      "status": "exec_start: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_start: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "6d3e6d511ea74dd40f6dd4f7adbfb8d0ae0df141717e7101ecd1b1696e835dbe",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254144,
+      "timeNano": 1744254144079156700
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:24.085Z",
+    "event": {
+      "status": "exec_create: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_create: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "6d3e6d511ea74dd40f6dd4f7adbfb8d0ae0df141717e7101ecd1b1696e835dbe",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254144,
+      "timeNano": 1744254144078413600
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:14.073Z",
+    "event": {
+      "status": "exec_die",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_die",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "7698b0a143b09ec61105da590be59483092df25c3b880cee7ccb4a6e81a930fd",
+          "exitCode": "0",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254134,
+      "timeNano": 1744254134072130300
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:14.053Z",
+    "event": {
+      "status": "exec_start: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_start: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "7698b0a143b09ec61105da590be59483092df25c3b880cee7ccb4a6e81a930fd",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254134,
+      "timeNano": 1744254134050553300
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:14.052Z",
+    "event": {
+      "status": "exec_create: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_create: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "7698b0a143b09ec61105da590be59483092df25c3b880cee7ccb4a6e81a930fd",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254134,
+      "timeNano": 1744254134050415600
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:04.048Z",
+    "event": {
+      "status": "exec_die",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_die",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "6c4b7bce61510592e50d86ec70988662a13127c8b5e91a8bb673329d36b0b8a3",
+          "exitCode": "0",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254124,
+      "timeNano": 1744254124047609300
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:04.023Z",
+    "event": {
+      "status": "exec_start: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_start: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "6c4b7bce61510592e50d86ec70988662a13127c8b5e91a8bb673329d36b0b8a3",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254124,
+      "timeNano": 1744254124018633000
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:02:04.021Z",
+    "event": {
+      "status": "exec_create: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_create: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "6c4b7bce61510592e50d86ec70988662a13127c8b5e91a8bb673329d36b0b8a3",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254124,
+      "timeNano": 1744254124018108700
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:54.014Z",
+    "event": {
+      "status": "exec_die",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_die",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "fd6ff25d2c0bf5bacf43e0ee0b52e9ab177cfbe3bffdbf1a7c1da0eb689f09c2",
+          "exitCode": "0",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254114,
+      "timeNano": 1744254114013359900
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:53.978Z",
+    "event": {
+      "status": "exec_start: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_start: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "fd6ff25d2c0bf5bacf43e0ee0b52e9ab177cfbe3bffdbf1a7c1da0eb689f09c2",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254113,
+      "timeNano": 1744254113973194000
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:53.976Z",
+    "event": {
+      "status": "exec_create: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_create: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "fd6ff25d2c0bf5bacf43e0ee0b52e9ab177cfbe3bffdbf1a7c1da0eb689f09c2",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254113,
+      "timeNano": 1744254113972745500
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:43.966Z",
+    "event": {
+      "status": "exec_die",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_die",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "577fe23f4f2a64ab09d19a7235bfb533fa09998e4def06e1ba36ddf7fba756c3",
+          "exitCode": "0",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254103,
+      "timeNano": 1744254103964668400
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:43.932Z",
+    "event": {
+      "status": "exec_start: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_start: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "577fe23f4f2a64ab09d19a7235bfb533fa09998e4def06e1ba36ddf7fba756c3",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254103,
+      "timeNano": 1744254103926023400
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:43.930Z",
+    "event": {
+      "status": "exec_create: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_create: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "577fe23f4f2a64ab09d19a7235bfb533fa09998e4def06e1ba36ddf7fba756c3",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254103,
+      "timeNano": 1744254103925514000
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:33.918Z",
+    "event": {
+      "status": "exec_die",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_die",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "6b61b93cf9e522c78f2e95d594f626fe8972ca3900211161b510410cde3f1c65",
+          "exitCode": "0",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254093,
+      "timeNano": 1744254093917100500
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:33.897Z",
+    "event": {
+      "status": "exec_start: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_start: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "6b61b93cf9e522c78f2e95d594f626fe8972ca3900211161b510410cde3f1c65",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254093,
+      "timeNano": 1744254093895399000
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:33.896Z",
+    "event": {
+      "status": "exec_create: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_create: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "6b61b93cf9e522c78f2e95d594f626fe8972ca3900211161b510410cde3f1c65",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254093,
+      "timeNano": 1744254093895301600
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:24.581Z",
+    "event": {
+      "status": "save",
+      "id": "sha256:0e9248f3f591efc2b015cfef66b3106049daace58fbcb18668219a067043c73b",
+      "Type": "image",
+      "Action": "save",
+      "Actor": {
+        "ID": "sha256:0e9248f3f591efc2b015cfef66b3106049daace58fbcb18668219a067043c73b",
+        "Attributes": {
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.service": "monitoring",
+          "com.docker.compose.version": "2.22.0",
+          "name": "sha256:0e9248f3f591efc2b015cfef66b3106049daace58fbcb18668219a067043c73b"
+        }
+      },
+      "scope": "local",
+      "time": 1744254084,
+      "timeNano": 1744254084580841700
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:23.737Z",
+    "event": {
+      "status": "exec_die",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_die",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "5e0b5ef9fed04d84d7d0da2d6867a6c660023431d93544d39e286572a9e8b3b3",
+          "exitCode": "0",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254083,
+      "timeNano": 1744254083736549600
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:23.718Z",
+    "event": {
+      "status": "exec_start: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_start: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "5e0b5ef9fed04d84d7d0da2d6867a6c660023431d93544d39e286572a9e8b3b3",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254083,
+      "timeNano": 1744254083716380000
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:23.717Z",
+    "event": {
+      "status": "exec_create: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_create: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "5e0b5ef9fed04d84d7d0da2d6867a6c660023431d93544d39e286572a9e8b3b3",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254083,
+      "timeNano": 1744254083716253000
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:15.770Z",
+    "event": {
+      "status": "save",
+      "id": "sha256:0e9248f3f591efc2b015cfef66b3106049daace58fbcb18668219a067043c73b",
+      "Type": "image",
+      "Action": "save",
+      "Actor": {
+        "ID": "sha256:0e9248f3f591efc2b015cfef66b3106049daace58fbcb18668219a067043c73b",
+        "Attributes": {
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.service": "monitoring",
+          "com.docker.compose.version": "2.22.0",
+          "name": "sha256:0e9248f3f591efc2b015cfef66b3106049daace58fbcb18668219a067043c73b"
+        }
+      },
+      "scope": "local",
+      "time": 1744254075,
+      "timeNano": 1744254075769148700
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:13.713Z",
+    "event": {
+      "status": "exec_die",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_die",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "4e4a5b13758d6bc6384b18728f66ba6092cff0918d0b2e62c9e3a78d7f09c05a",
+          "exitCode": "0",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254073,
+      "timeNano": 1744254073711121200
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:13.688Z",
+    "event": {
+      "status": "exec_start: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_start: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "4e4a5b13758d6bc6384b18728f66ba6092cff0918d0b2e62c9e3a78d7f09c05a",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254073,
+      "timeNano": 1744254073684483000
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:13.687Z",
+    "event": {
+      "status": "exec_create: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_create: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "4e4a5b13758d6bc6384b18728f66ba6092cff0918d0b2e62c9e3a78d7f09c05a",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254073,
+      "timeNano": 1744254073684380000
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:03.679Z",
+    "event": {
+      "status": "exec_die",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_die",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "6bd45d52a60ff60133976c926484725daae0fc2377c388016d154fb79170c102",
+          "exitCode": "0",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254063,
+      "timeNano": 1744254063678249700
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:03.652Z",
+    "event": {
+      "status": "exec_start: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_start: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "6bd45d52a60ff60133976c926484725daae0fc2377c388016d154fb79170c102",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254063,
+      "timeNano": 1744254063649602000
+    }
+  },
+  {
+    "timestamp": "2025-04-10T03:01:03.651Z",
+    "event": {
+      "status": "exec_create: wget --spider http://localhost:3000",
+      "id": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+      "from": "step-towards-light-web",
+      "Type": "container",
+      "Action": "exec_create: wget --spider http://localhost:3000",
+      "Actor": {
+        "ID": "bfe5f61f5806fb03656f533f8b9fb2d78616ebabe1944949c65560dce01aec43",
+        "Attributes": {
+          "com.docker.compose.config-hash": "e3e54e77da0d17afa9079b675b0bc115d004505438ba43b16f3c5d181f18cd16",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:5aaea45207c94c9670ac18ca50bcc9fa807732a0d705788e706a3feedaa726bc",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "step-towards-light",
+          "com.docker.compose.project.config_files": "/Users/shazyasif/step-towards-light/docker-compose.yml",
+          "com.docker.compose.project.working_dir": "/Users/shazyasif/step-towards-light",
+          "com.docker.compose.service": "web",
+          "com.docker.compose.version": "2.22.0",
+          "desktop.docker.io/binds/0/Source": "/Users/shazyasif/step-towards-light/scripts/monitoring/data",
+          "desktop.docker.io/binds/0/SourceKind": "hostFile",
+          "desktop.docker.io/binds/0/Target": "/app/monitoring/data",
+          "execID": "6bd45d52a60ff60133976c926484725daae0fc2377c388016d154fb79170c102",
+          "image": "step-towards-light-web",
+          "name": "step-towards-light-web-1"
+        }
+      },
+      "scope": "local",
+      "time": 1744254063,
+      "timeNano": 1744254063649332500
+    }
+  }
+]

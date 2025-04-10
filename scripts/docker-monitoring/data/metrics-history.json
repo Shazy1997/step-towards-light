@@ -1,0 +1,13 @@
+[
+  {
+    "timestamp": "2025-04-10T03:01:00.893Z",
+    "containers": [
+      {
+        "name": "step-towards-light-web-1",
+        "cpu": "0.00%",
+        "memory": "44.04MiB / 7.667GiB",
+        "network": "295kB / 3.88kB"
+      }
+    ]
+  }
+]

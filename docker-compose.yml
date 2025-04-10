@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "http://localhost:3000"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    volumes:
+      - ./scripts/monitoring/data:/app/monitoring/data
+    restart: unless-stopped
+
+  monitoring:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm run docker:monitor
+    volumes:
+      - ./scripts/monitoring/data:/app/monitoring/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - web

@@ -1,17 +1,29 @@
 {
-  "timestamp": "2025-04-10T02:57:17.514Z",
+  "timestamp": "2025-04-10T03:02:54.968Z",
   "docker": {
     "status": "active",
     "version": "Docker version 24.0.6, build ed223bc",
     "daemon": true
   },
   "containers": {
-    "running": 0,
+    "running": 1,
     "status": {
+      "step-towards-light-monitoring-1": "Exited (1) 2 minutes ago",
+      "step-towards-light-web-1": "Up 2 minutes (healthy)",
       "homeassistant": "Exited (0) 2 months ago",
       "magical_lichterman": "Exited (255) 3 months ago"
     },
     "resources": {
+      "step-towards-light-monitoring-1": {
+        "cpu": "0.00%",
+        "memory": "0B / 0B",
+        "network": "0B / 0B"
+      },
+      "step-towards-light-web-1": {
+        "cpu": "0.00%",
+        "memory": "45.5MiB / 7.667GiB",
+        "network": "304kB / 24.4kB"
+      },
       "homeassistant": {
         "cpu": "0.00%",
         "memory": "0B / 0B",
