@@ -1,0 +1,66 @@
+{
+  "timestamp": "2025-04-10T04:21:11.338Z",
+  "system": {
+    "docker": {
+      "status": "active",
+      "output": "\n> step-towards-light@1.0.0 docker:status\n> scripts/docker-monitoring/warp-commands.sh status\n\n=== Container Status ===\n=== Health Check ===\nNo health check configured\n=== Resource Usage ===\nCONTAINER ID   NAME                       CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O       PIDS\nbfe5f61f5806   step-towards-light-web-1   0.00%     51.44MiB / 7.667GiB   0.66%     12.2MB / 715MB   164kB / 4.1kB   22\n"
+    },
+    "monitoring": {
+      "timestamp": "2025-04-10T03:08:45.412Z",
+      "docker": {
+        "status": "active",
+        "version": "Docker version 24.0.6, build ed223bc",
+        "daemon": true
+      },
+      "containers": {
+        "running": 1,
+        "status": {
+          "step-towards-light-monitoring-1": "Exited (1) 8 minutes ago",
+          "step-towards-light-web-1": "Up 8 minutes (healthy)",
+          "homeassistant": "Exited (0) 2 months ago",
+          "magical_lichterman": "Exited (255) 3 months ago"
+        },
+        "resources": {
+          "step-towards-light-monitoring-1": {
+            "cpu": "0.00%",
+            "memory": "0B / 0B",
+            "network": "0B / 0B"
+          },
+          "step-towards-light-web-1": {
+            "cpu": "0.02%",
+            "memory": "84.46MiB / 7.667GiB",
+            "network": "12.2MB / 715MB"
+          },
+          "homeassistant": {
+            "cpu": "0.00%",
+            "memory": "0B / 0B",
+            "network": "0B / 0B"
+          },
+          "magical_lichterman": {
+            "cpu": "0.00%",
+            "memory": "0B / 0B",
+            "network": "0B / 0B"
+          }
+        }
+      },
+      "build": {
+        "lastBuild": null,
+        "buildTime": null,
+        "status": "unknown"
+      }
+    },
+    "security": {
+      "headersConfigured": true,
+      "rateLimitingEnabled": true,
+      "sslConfigured": false
+    }
+  },
+  "runbook": "# System Runbook\nGenerated: 2025-04-10T03:14:58.481Z\n\n## Quick Reference\n- Repository: /Users/shazyasif/step-towards-light\n- Environment: development\n- Status Dashboard: http://localhost:3000/status\n\n## Common Tasks\n\n### 1. Start Environment\n```bash\n# Start all services\ndocker-compose up -d\n\n# Start monitoring\nnpm run docker:monitor\n```\n\n### 2. Check Status\n```bash\n# View all stats\nnpm run update-all\n\n# Check specific container\nnpm run docker:status web\n```\n\n### 3. View Logs\n```bash\n# Application logs\nnpm run docker:logs web\n\n# Nginx logs\ndocker-compose logs nginx\n```\n\n### 4. Backup/Restore\n```bash\n# Create backup\nnode config/reliability/backup.js\n\n# Restore backup\nnode config/reliability/backup.js restore <backup-id>\n```\n\n## Troubleshooting\n\n### Container Issues\n1. Check container status\n2. View logs\n3. Verify resource usage\n4. Restart if necessary\n\n### Security Issues\n1. Check SSL certificates\n2. Verify security headers\n3. Review rate limiting logs\n4. Check CSRF protection\n\n### Performance Issues\n1. Monitor resource usage\n2. Check response times\n3. Review error rates\n4. Analyze metrics\n\n## Maintenance\n\n### Daily Tasks\n- Review logs\n- Check backups\n- Monitor resources\n- Update documentation\n\n### Weekly Tasks\n- Security updates\n- Performance review\n- Backup testing\n- Documentation review\n\n### Monthly Tasks\n- SSL certificate check\n- Full system backup\n- Disaster recovery test\n- Dependency updates\n\n## Emergency Procedures\n\n### System Down\n1. Check container status\n2. Review error logs\n3. Verify resources\n4. Check external dependencies\n\n### Security Incident\n1. Enable maintenance mode\n2. Review security logs\n3. Update security rules\n4. Verify all endpoints\n\n### Data Recovery\n1. Stop affected services\n2. Verify backup integrity\n3. Restore from backup\n4. Verify restoration\n\n## Contacts\n\n### DevOps Team\n- Primary: devops@example.com\n- Emergency: +1-XXX-XXX-XXXX\n\n### Security Team\n- Primary: security@example.com\n- Emergency: +1-XXX-XXX-XXXX\n",
+  "recentActions": [
+    "931afb1 docs: Update documentation [skip ci]",
+    "a9e1d24 feat: Add interactive AI chat",
+    "882fae8 docs: Update documentation [skip ci]",
+    "ca429d1 docs: Add final status report",
+    "cb4dfbc docs: Update documentation [skip ci]"
+  ]
+}
