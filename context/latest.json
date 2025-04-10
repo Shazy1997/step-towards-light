@@ -1,0 +1,185 @@
+{
+  "timestamp": "2025-04-10T04:01:47.800Z",
+  "project": {
+    "mission": {
+      "primary": "Providing authentic Islamic guidance and motivation",
+      "goals": [
+        "Share authentic Islamic knowledge",
+        "Build supportive community",
+        "Facilitate spiritual growth",
+        "Address contemporary challenges"
+      ]
+    },
+    "features": {
+      "implemented": [
+        "Next.js application structure",
+        "Docker configuration",
+        "AI monitoring system",
+        "Automated testing",
+        "Documentation system"
+      ],
+      "inProgress": [
+        "Content management",
+        "Discord integration",
+        "E-commerce features",
+        "Production deployment"
+      ]
+    },
+    "timeline": {
+      "current": "Development Phase",
+      "nextMilestone": "Production Deployment",
+      "completed": [
+        "Core implementation",
+        "Testing setup",
+        "Monitoring system",
+        "Documentation"
+      ]
+    }
+  },
+  "progress": {
+    "currentProgress": "## Project Progress Report\nGenerated: 2025-04-10T03:08:49.816Z\n\n### Repository Analysis\n- Files: 59\n- Directories: 24\n- Size: 0.91 MB\n- Components: 1\n- Pages: 7\n- Tests: 2\n\n### Docker Environment\n\n- Status: ✅ Active\n- Version: Docker version 24.0.6, build ed223bc\n- Running Containers: 1\n\n\n### Implementation Status\n- ✅ Next.js Application\n- ✅ Testing Framework\n- ✅ Repository Analysis\n- ✅ Docker Setup\n- 🔄 Discord Integration\n- ✅ Monitoring Setup\n\n### System Health\n- Git Status:\n  * Branch: main\n  * Clean Working Directory: false\n- Dependencies:\n  * Updates Available: true\n\n### Latest Updates\nfeat: Add Playwright E2E testing and production checklist\n\n- Replace Cypress with Playwright for E2E testing\n- Add production readiness checklist\n- Configure test automation\n- Update monitoring scripts\n- Add comprehensive validation steps\n\nThis setup provides a robust framework for\nproduction validation and monitoring.\n",
+    "projectStatus": "document_type: MEMORY\ndocument_id: STL-PROJECT-STATUS\nrule: |\n  Project: Step Towards the Light\n  Repository: /Users/shazyasif/step-towards-light\n  Last Updated: 2025-04-10T03:08:49.816Z\n  \n  Current Implementation Status:\n  - Next.js Application ✅\n    * Components: 1 implemented\n    * Pages: 7 created\n    * Styling: Tailwind CSS configured\n  \n  - Testing Framework ✅\n    * Jest + React Testing Library\n    * 2 test files\n    * All tests passing\n  \n  - Repository Analysis ✅\n    * Total Files: 59\n    * Total Size: 0.91 MB\n    * Components: 1\n    * Pages: 7\n    * Tests: 2\n  \n  - Docker Setup ✅\n    * Daemon Status: active\n    * Version: Docker version 24.0.6, build ed223bc\n    * Running Containers: 1\n  \n  - Discord Integration 🔄\n    * Basic webhook utility created\n    * Integration structure in place\n    * Pending actual implementation\n  \n  - Monitoring Setup ✅\n    * GitHub Actions workflow configured\n    * Warp rules integration established\n    * Docker health monitoring active\n    * Automated progress tracking\n  \n  System Status:\n  - Git:\n    * Branch: main\n    * Uncommitted Changes: Yes\n  - NPM:\n    * Outdated Dependencies: Yes\n  \n  Next Steps:\n  1. Complete Docker environment testing\n  2. Implement Discord webhook functionality\n  3. Add more UI components\n  4. Enhance test coverage\n  \n  Last Git Commit: feat: Add Playwright E2E testing and production checklist\n\n- Replace Cypress with Playwright for E2E testing\n- Add production readiness checklist\n- Configure test automation\n- Update monitoring scripts\n- Add comprehensive validation steps\n\nThis setup provides a robust framework for\nproduction validation and monitoring.\n  ",
+    "gitStatus": {
+      "branch": "main",
+      "lastCommit": "docs: Update documentation [skip ci]",
+      "recentChanges": [
+        "docs: Update documentation [skip ci]",
+        "feat: Add unified status command",
+        "docs: Update documentation [skip ci]",
+        "test: Add dashboard tests and documentation",
+        "docs: Update documentation [skip ci]",
+        ""
+      ]
+    }
+  },
+  "technical": {
+    "stack": {
+      "frontend": "Next.js",
+      "containerization": "Docker",
+      "monitoring": "Custom AI system",
+      "testing": "Jest, Playwright",
+      "documentation": "Automated markdown"
+    },
+    "implementation": {
+      "components": [
+        "AI monitoring",
+        "Alert system",
+        "Documentation",
+        "Testing framework"
+      ],
+      "metrics": {
+        "testCoverage": 59.91666666666668,
+        "passingTests": 3,
+        "totalTests": 3,
+        "components": "1",
+        "pages": "7"
+      },
+      "dependencies": {
+        "csurf": "^1.11.0",
+        "express-rate-limit": "^7.5.0",
+        "next": "^14.0.0",
+        "node-fetch": "^3.3.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+      }
+    }
+  },
+  "deployment": {
+    "environment": "development",
+    "docker": {
+      "status": "Running",
+      "containers": [
+        "Next.js application",
+        "Monitoring system",
+        "AI integration"
+      ],
+      "pending": [
+        "Production configuration",
+        "SSL setup",
+        "Load balancing"
+      ]
+    },
+    "status": {
+      "development": "Active",
+      "staging": "Pending",
+      "production": "Planned"
+    }
+  },
+  "monitoring": {
+    "monitoring": {
+      "timestamp": "2025-04-10T03:08:45.412Z",
+      "docker": {
+        "status": "active",
+        "version": "Docker version 24.0.6, build ed223bc",
+        "daemon": true
+      },
+      "containers": {
+        "running": 1,
+        "status": {
+          "step-towards-light-monitoring-1": "Exited (1) 8 minutes ago",
+          "step-towards-light-web-1": "Up 8 minutes (healthy)",
+          "homeassistant": "Exited (0) 2 months ago",
+          "magical_lichterman": "Exited (255) 3 months ago"
+        },
+        "resources": {
+          "step-towards-light-monitoring-1": {
+            "cpu": "0.00%",
+            "memory": "0B / 0B",
+            "network": "0B / 0B"
+          },
+          "step-towards-light-web-1": {
+            "cpu": "0.02%",
+            "memory": "84.46MiB / 7.667GiB",
+            "network": "12.2MB / 715MB"
+          },
+          "homeassistant": {
+            "cpu": "0.00%",
+            "memory": "0B / 0B",
+            "network": "0B / 0B"
+          },
+          "magical_lichterman": {
+            "cpu": "0.00%",
+            "memory": "0B / 0B",
+            "network": "0B / 0B"
+          }
+        }
+      },
+      "build": {
+        "lastBuild": null,
+        "buildTime": null,
+        "status": "unknown"
+      }
+    },
+    "testing": {
+      "timestamp": "2025-04-10T04:01:45.807Z",
+      "suites": [
+        {
+          "name": "AI Core",
+          "status": "passed",
+          "output": "\n> step-towards-light@1.0.0 test:ai\n> jest tests/ai/ai.test.js\n\n  console.log\n    Generating AI analysis report...\n\n      at AIReportGenerator.log [as generateReport] (scripts/ai/generate-report.js:20:15)\n\n  console.log\n    Report generated successfully\n\n      at AIReportGenerator.log [as generateReport] (scripts/ai/generate-report.js:34:15)\n\n  console.log\n    Generating AI analysis report...\n\n      at AIReportGenerator.log [as generateReport] (scripts/ai/generate-report.js:20:15)\n\n  console.log\n    Report generated successfully\n\n      at AIReportGenerator.log [as generateReport] (scripts/ai/generate-report.js:34:15)\n\n-----------------------|---------|----------|---------|---------|--------------------------------------\nFile                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                    \n-----------------------|---------|----------|---------|---------|--------------------------------------\nAll files              |   68.42 |    46.87 |   73.17 |   69.46 |                                      \n config/ai             |     100 |      100 |     100 |     100 |                                      \n  config.js            |     100 |      100 |     100 |     100 |                                      \n scripts/ai            |   68.23 |    46.87 |   73.17 |   69.27 |                                      \n  generate-report.js   |   80.59 |       50 |   76.47 |   84.37 | 14,37-38,108,111-113,126-127,158-159 \n  llama_integration.js |   46.66 |    33.33 |   61.53 |   46.66 | 16-35,64,73,91,100-168,176-178       \n  prompt-manager.js    |   79.06 |       50 |   81.81 |   78.57 | 14,62,90-98                          \n-----------------------|---------|----------|---------|---------|--------------------------------------\n",
+          "coverage": 68.42
+        },
+        {
+          "name": "Alerts",
+          "status": "passed",
+          "output": "\n> step-towards-light@1.0.0 test:alerts\n> jest tests/ai/alert-reporter.test.js\n\n  console.log\n    [CRITICAL] cpu_usage: High resource usage detected\n\n      at AlertManager.log [as notifyAlert] (scripts/ai/alert-manager.js:128:13)\n\n  console.error\n    CRITICAL ALERT: High resource usage detected\n\n      142 |\n      143 |   async notifyCritical(alert) {\n    > 144 |     console.error('CRITICAL ALERT:', alert.details.assessment);\n          |             ^\n      145 |   }\n      146 |\n      147 |   async notifyWarning(alert) {\n\n      at AlertManager.error [as notifyCritical] (scripts/ai/alert-manager.js:144:13)\n      at AlertManager.notifyCritical [as notifyAlert] (scripts/ai/alert-manager.js:133:20)\n      at AlertManager.notifyAlert [as processAlert] (scripts/ai/alert-manager.js:21:18)\n      at Object.<anonymous> (tests/ai/alert-reporter.test.js:63:21)\n\n-------------------|---------|----------|---------|---------|--------------------------------------------------\nFile               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                \n-------------------|---------|----------|---------|---------|--------------------------------------------------\nAll files          |   70.37 |    49.23 |   74.28 |   72.58 |                                                  \n config/ai         |     100 |      100 |     100 |     100 |                                                  \n  config.js        |     100 |      100 |     100 |     100 |                                                  \n scripts/ai        |   70.14 |    49.23 |   74.28 |   72.35 |                                                  \n  alert-manager.js |   63.75 |    44.68 |   73.33 |   66.66 | 13,24-25,57-65,77-80,120,136-139,148-152,164-180 \n  reporter.js      |   79.62 |    61.11 |      75 |   80.39 | 13,37-43,67,72,80,107                            \n-------------------|---------|----------|---------|---------|--------------------------------------------------\n",
+          "coverage": 70.37
+        },
+        {
+          "name": "Dashboard",
+          "status": "passed",
+          "output": "\n> step-towards-light@1.0.0 test:dashboard\n> jest tests/ai/dashboard.test.js\n\n-----------------------|---------|----------|---------|---------|-----------------------------------------\nFile                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                       \n-----------------------|---------|----------|---------|---------|-----------------------------------------\nAll files              |   40.96 |     25.3 |   45.71 |   42.61 |                                         \n config/ai             |     100 |      100 |     100 |     100 |                                         \n  config.js            |     100 |      100 |     100 |     100 |                                         \n scripts/ai            |   40.72 |     25.3 |   45.71 |   42.37 |                                         \n  alert-manager.js     |      15 |     6.38 |      20 |   15.27 | 13-152,164-180                          \n  dashboard.js         |   72.22 |    58.33 |   63.63 |   73.58 | 15,34-35,47-48,59-61,85,197,217,242-244 \n  llama_integration.js |   18.33 |    33.33 |   15.38 |   18.33 | 16-168,176-178                          \n  reporter.js          |   72.22 |       50 |      65 |   76.47 | 13,37-43,67,72,80,96,100,107            \n-----------------------|---------|----------|---------|---------|-----------------------------------------\n",
+          "coverage": 40.96
+        }
+      ],
+      "summary": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "coverage": 59.91666666666668
+      }
+    },
+    "alerts": [],
+    "status": "unknown"
+  }
+}
