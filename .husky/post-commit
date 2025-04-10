@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Update documentation
+npm run docs:update
+
+# Add updated documentation to the commit
+git add docs/ PRODUCTION_SETUP.md
+git commit --amend --no-edit

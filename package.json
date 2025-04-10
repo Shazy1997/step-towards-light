@@ -28,7 +28,8 @@
     "test:e2e:ui": "playwright test --ui",
     "ssl:generate": "mkdir -p config/nginx/certs && openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout config/nginx/certs/privkey.pem -out config/nginx/certs/fullchain.pem",
     "nginx:validate": "docker run --rm -v /Users/shazyasif/step-towards-light/config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro nginx:latest nginx -t",
-    "nginx:reload": "docker exec nginx-proxy nginx -s reload"
+    "nginx:reload": "docker exec nginx-proxy nginx -s reload",
+    "docs:update": "node scripts/docs/auto-update.js"
   },
   "dependencies": {
     "csurf": "^1.11.0",
@@ -48,6 +49,7 @@
     "autocannon": "^8.0.0",
     "autoprefixer": "^10.4.16",
     "babel-jest": "^29.7.0",
+    "husky": "^9.1.7",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
