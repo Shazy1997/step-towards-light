@@ -49,7 +49,9 @@
     "ai:dashboard:watch": "watch -n 300 npm run ai:dashboard",
     "test:dashboard": "jest tests/ai/dashboard.test.js",
     "monitor:start": "node scripts/monitor.js",
-    "validate": "npm run test:all && npm run monitor:start"
+    "validate": "npm run test:all && npm run monitor:start",
+    "context:generate": "node scripts/ai/context-manager.js",
+    "ai:context": "node scripts/ai/use-context.js"
   },
   "dependencies": {
     "csurf": "^1.11.0",
