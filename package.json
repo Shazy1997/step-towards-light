@@ -21,7 +21,7 @@
     "docker:all": "scripts/docker-monitoring/warp-commands.sh all",
     "e2e": "cypress run",
     "e2e:open": "cypress open",
-    "test:all": "npm test && npm run test:e2e",
+    "test:all": "node scripts/test-all.js",
     "monitor:load": "node scripts/monitor-load.js",
     "monitor:production": "npm run monitor:load && npm run test:all && npm run update-all",
     "test:e2e": "playwright test",
@@ -47,7 +47,9 @@
     "test:alerts": "jest tests/ai/alert-reporter.test.js",
     "ai:dashboard": "node scripts/ai/dashboard.js",
     "ai:dashboard:watch": "watch -n 300 npm run ai:dashboard",
-    "test:dashboard": "jest tests/ai/dashboard.test.js"
+    "test:dashboard": "jest tests/ai/dashboard.test.js",
+    "monitor:start": "node scripts/monitor.js",
+    "validate": "npm run test:all && npm run monitor:start"
   },
   "dependencies": {
     "csurf": "^1.11.0",
