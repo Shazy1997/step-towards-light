@@ -43,7 +43,14 @@ describe('AI Dashboard', () => {
     test('saves dashboard files', async () => {
       await dashboard.generateDashboard();
       
-      expect(fs.writeFileSync).toHaveBeenCalledTimes(3); // JSON, latest, and HTML
+      // Verify file writes: dashboard JSON, latest JSON, HTML, metrics, and status
+      expect(fs.writeFileSync).toHaveBeenCalledTimes(5);
+      
+      // Verify correct file types are being written
+      const calls = fs.writeFileSync.mock.calls;
+      expect(calls.some(call => call[0].endsWith('.json'))).toBeTruthy();
+      expect(calls.some(call => call[0].endsWith('latest.json'))).toBeTruthy();
+      expect(calls.some(call => call[0].endsWith('index.html'))).toBeTruthy();
     });
   });
 
