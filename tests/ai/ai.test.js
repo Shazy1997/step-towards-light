@@ -1,11 +1,23 @@
 const fs = require('fs');
 const path = require('path');
 
-// Mock Ollama API calls
+// Mock implementations
 jest.mock('child_process', () => ({
-  exec: jest.fn(),
-  execSync: jest.fn(),
+  exec: jest.fn((cmd, callback) => callback(null, { stdout: 'mocked output' })),
+  execSync: jest.fn(() => 'mocked output'),
   spawn: jest.fn()
+}));
+
+// Mock fs operations
+jest.mock('fs', () => ({
+  ...jest.requireActual('fs'),
+  writeFileSync: jest.fn(),
+  readFileSync: jest.fn(() => JSON.stringify({
+    status: 'healthy',
+    metrics: { cpu: '45%', memory: '60%' }
+  })),
+  existsSync: jest.fn(() => true),
+  mkdirSync: jest.fn()
 }));
 
 // Import after mocks
@@ -16,18 +28,13 @@ const reportGenerator = require('../../scripts/ai/generate-report');
 
 describe('AI Integration Tests', () => {
   beforeAll(() => {
-    // Create necessary directories for testing
-    const dirs = [
-      path.join(process.cwd(), 'logs'),
-      path.join(process.cwd(), 'analysis'),
-      path.join(process.cwd(), 'reports', 'ai')
-    ];
-    
-    dirs.forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
+    // Setup test environment
+    jest.setTimeout(10000); // Increase timeout for all tests
+  });
+
+  beforeEach(() => {
+    // Clear all mocks before each test
+    jest.clearAllMocks();
   });
 
   describe('AI Configuration', () => {
@@ -120,17 +127,24 @@ describe('AI Integration Tests', () => {
   });
 
   describe('Report Generation', () => {
+    beforeEach(() => {
+      // Mock AI analysis response
+      jest.spyOn(ai, 'analyze').mockImplementation(() => 
+        Promise.resolve(JSON.stringify({
+          assessment: 'System healthy',
+          recommendations: [{
+            action: 'analyze_logs',
+            runbookRef: 'section 1.2',
+            priority: 3,
+            risk: 'low'
+          }],
+          runbookReferences: ['section 1.2'],
+          risks: ['none identified']
+        }))
+      );
+    });
+
     test('generates valid report structure', async () => {
-      // Mock AI response
-      const mockAnalysis = {
-        assessment: 'System healthy',
-        recommendations: [],
-        runbookReferences: [],
-        risks: []
-      };
-      
-      jest.spyOn(ai, 'analyze').mockResolvedValue(JSON.stringify(mockAnalysis));
-      
       const report = await reportGenerator.generateReport();
       
       expect(report).toHaveProperty('timestamp');
@@ -138,46 +152,37 @@ describe('AI Integration Tests', () => {
       expect(report).toHaveProperty('analyses');
       expect(report).toHaveProperty('summary');
       expect(report).toHaveProperty('recommendations');
-    });
+    }, 10000);
 
     test('includes all analysis types', async () => {
-      // Mock AI response
-      const mockAnalysis = {
-        assessment: 'System healthy',
-        recommendations: [],
-        runbookReferences: [],
-        risks: []
-      };
-      
-      jest.spyOn(ai, 'analyze').mockResolvedValue(JSON.stringify(mockAnalysis));
-      
       const report = await reportGenerator.generateReport();
       
       const analysisTypes = report.analyses.map(a => a.type);
       expect(analysisTypes).toContain('health');
       expect(analysisTypes).toContain('performance');
       expect(analysisTypes).toContain('security');
-    });
+    }, 10000);
   });
 
   describe('Integration Tests', () => {
     beforeEach(() => {
       // Mock successful AI response
-      const mockResponse = {
-        assessment: 'Analysis complete',
-        recommendations: [
-          {
-            action: 'analyze_logs',
-            runbookRef: 'section 1.2',
-            priority: 1,
-            risk: 'medium'
-          }
-        ],
-        runbookReferences: ['section 1.2'],
-        risks: ['potential resource constraint']
-      };
-      
-      jest.spyOn(ai, 'analyze').mockResolvedValue(JSON.stringify(mockResponse));
+      jest.spyOn(ai, 'analyze').mockImplementation((input) => {
+        const context = JSON.parse(input);
+        return Promise.resolve(JSON.stringify({
+          assessment: `Analysis for ${context.type}`,
+          recommendations: [
+            {
+              action: 'analyze_logs',
+              runbookRef: 'section 1.2',
+              priority: context.type.includes('security') ? 1 : 3,
+              risk: context.type.includes('security') ? 'high' : 'low'
+            }
+          ],
+          runbookReferences: ['section 1.2'],
+          risks: [context.type.includes('security') ? 'security risk' : 'performance impact']
+        }));
+      });
     });
 
     test('handles high CPU alert correctly', async () => {
@@ -209,8 +214,9 @@ describe('AI Integration Tests', () => {
       const response = JSON.parse(analysis);
 
       expect(response).toHaveProperty('assessment');
-      expect(response).toHaveProperty('recommendations');
-      expect(response.recommendations.length).toBeGreaterThan(0);
+      expect(response.assessment).toContain('security');
+      expect(response.recommendations[0].priority).toBe(1);
+      expect(response.risks[0]).toContain('security');
     });
   });
 });

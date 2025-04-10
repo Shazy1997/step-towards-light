@@ -40,7 +40,8 @@
     "ai:report": "node scripts/ai/generate-report.js",
     "test:ai": "jest tests/ai/ai.test.js",
     "test:ai:watch": "jest tests/ai/ai.test.js --watch",
-    "test:ai:coverage": "jest tests/ai/ai.test.js --coverage"
+    "test:ai:coverage": "jest tests/ai/ai.test.js --coverage",
+    "ai:validate": "node scripts/ai/validate.js"
   },
   "dependencies": {
     "csurf": "^1.11.0",
@@ -67,6 +68,5 @@
     "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5"
-  },
-  "jest": "{\"testEnvironment\":\"node\",\"testMatch\":[\"**/tests/**/*.test.js\"],\"collectCoverage\":true}"
+  }
 }

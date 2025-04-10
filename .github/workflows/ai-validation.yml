@@ -1,0 +1,84 @@
+name: AI System Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'scripts/ai/**'
+      - 'config/ai/**'
+      - 'tests/ai/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'scripts/ai/**'
+      - 'config/ai/**'
+      - 'tests/ai/**'
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run AI tests
+      run: npm run test:ai
+
+    - name: Generate test coverage report
+      run: npm run test:ai:coverage
+
+    - name: Upload coverage reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: coverage/
+
+  validate:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run system validation
+      run: |
+        npm run ai:init
+        npm run monitor:ai
+        npm run ai:report
+
+    - name: Upload validation report
+      uses: actions/upload-artifact@v3
+      with:
+        name: validation-report
+        path: reports/ai/latest.json
+
+  notify:
+    needs: [test, validate]
+    if: failure()
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Send notification
+      run: |
+        echo "AI validation failed. Check the logs for details."
+        # Add your notification logic here (e.g., Discord webhook)
