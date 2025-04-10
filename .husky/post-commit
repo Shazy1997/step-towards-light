@@ -1,9 +1,15 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+
+# Check if this is a documentation update commit
+if git log -1 --pretty=%B | grep -q "docs: Update documentation"; then
+  exit 0
+fi
 
 # Update documentation
 npm run docs:update
 
-# Add updated documentation to the commit
+# Stage documentation changes
 git add docs/ PRODUCTION_SETUP.md
-git commit --amend --no-edit
+
+# Commit documentation changes
+git commit --message "docs: Update documentation [skip ci]" || true
