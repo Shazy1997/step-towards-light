@@ -1,222 +1,230 @@
-# AI Monitoring Dashboard Guide
+# Platform Dashboard Guide
 
 ## Overview
-The AI monitoring dashboard provides a real-time view of system health, alerts, and recommendations from our local Llama 2 integration.
+The Platform Dashboard provides a comprehensive view of our Islamic guidance platform's status, combining technical monitoring with mission-focused metrics.
 
 ## Features
 
-### 1. Real-time Monitoring
-- System status
-- Active alerts
-- Performance metrics
-- AI recommendations
+### 1. Mission Monitoring
+```text
+Displays:
+- Core mission statement
+- Implementation goals
+- Current focus areas
+- Progress tracking
+```
 
-### 2. Visual Elements
-- Status indicators
-- Alert summaries
-- Metric graphs
-- Recommendation lists
+### 2. Content Management
+```text
+Tracks:
+- YouTube integration
+- Written khutbahs
+- Community content
+- Educational resources
+```
 
-### 3. Auto-refresh
-- 5-minute refresh interval
-- Real-time updates
-- Historical data tracking
+### 3. Community Engagement
+```text
+Monitors:
+- Discord integration
+- User participation
+- Discussion forums
+- Knowledge sharing
+```
+
+### 4. Technical Status
+```text
+Shows:
+- System health
+- Test coverage
+- Docker status
+- Implementation progress
+```
 
 ## Usage
 
 ### Starting the Dashboard
 ```bash
-# Generate single dashboard
-npm run ai:dashboard
-
-# Start continuous monitoring
-npm run ai:dashboard:watch
+# Launch dashboard
+npm run dashboard
 ```
 
-### Accessing the Dashboard
-- Open `dashboard/index.html` in your browser
-- Dashboard updates every 5 minutes
-- Manual refresh available
+### Interactive Controls
+- `r`: Refresh display
+- `c`: View context
+- `m`: View monitoring
+- `t`: Run tests
+- `d`: View documentation
+- `h`: Show help
+- `q`: Quit dashboard
 
-## Dashboard Sections
+## Monitoring Areas
 
-### 1. System Status
-```javascript
-{
-  overall: 'healthy|warning|critical',
-  alerts: {
-    total: number,
-    critical: number,
-    warning: number
-  },
-  lastUpdate: timestamp
-}
+### 1. Islamic Content
+- YouTube integration status
+- Content verification
+- Source authentication
+- Media processing
+
+### 2. Community Features
+- Discord integration
+- User engagement
+- Discussion monitoring
+- Support systems
+
+### 3. Technical Health
+- System status
+- Test results
+- Docker health
+- Resource usage
+
+### 4. Implementation Progress
+- Feature status
+- Development phase
+- Recent changes
+- Pending tasks
+
+## Real-time Updates
+
+### Automatic Updates
+- Dashboard refreshes every 5 minutes
+- Alert monitoring
+- Status tracking
+- Progress updates
+
+### Manual Updates
+```bash
+# Refresh dashboard
+Press 'r' in dashboard
+
+# View detailed context
+Press 'c' in dashboard
 ```
 
-### 2. Active Alerts
-```javascript
-{
-  recent: [
-    {
-      type: string,
-      severity: string,
-      details: object
-    }
-  ],
-  bySeverity: {
-    critical: Alert[],
-    warning: Alert[],
-    info: Alert[]
-  }
-}
-```
+## Integrations
 
-### 3. Performance Metrics
-```javascript
-{
-  cpu: string,
-  memory: string,
-  disk: string,
-  network: string
-}
-```
+### 1. Context Pipeline
+- Mission tracking
+- Progress monitoring
+- Status updates
+- Alert management
 
-### 4. AI Recommendations
-```javascript
-{
-  action: string,
-  priority: number,
-  risk: string,
-  runbookRef: string
-}
-```
+### 2. Monitoring System
+- System health
+- Resource usage
+- Performance metrics
+- Error tracking
 
-## Configuration
-
-### Dashboard Settings
-```javascript
-{
-  refreshInterval: 300000, // 5 minutes
-  maxAlerts: 5,
-  maxRecommendations: 5
-}
-```
-
-### Visual Customization
-- CSS styling available in dashboard template
-- Color coding for status levels
-- Responsive design
-
-## Integration
-
-### With Monitoring System
-```javascript
-// Update metrics
-const metrics = await monitor.gatherMetrics();
-await dashboard.updateMetrics(metrics);
-```
-
-### With Alert System
-```javascript
-// Process new alert
-const alert = await alertManager.processAlert(analysis);
-await dashboard.refreshAlerts();
-```
-
-### With AI Analysis
-```javascript
-// Get AI recommendations
-const analysis = await ai.analyze(context);
-await dashboard.updateRecommendations(analysis);
-```
-
-## Maintenance
-
-### Regular Tasks
-1. Check dashboard accessibility
-2. Verify metric updates
-3. Review alert history
-4. Update recommendations
-
-### Troubleshooting
-1. Check server logs
-2. Verify data sources
-3. Test refresh mechanism
-4. Validate metrics
+### 3. Documentation
+- Progress reports
+- Status updates
+- Implementation guides
+- Maintenance docs
 
 ## Best Practices
 
-### Monitoring
-1. Regular dashboard checks
-2. Alert review process
-3. Metric validation
-4. Performance tracking
+### 1. Regular Monitoring
+- Check dashboard daily
+- Review alerts
+- Monitor progress
+- Track issues
 
-### Response Actions
-1. Critical alert response
-2. Warning investigation
-3. Recommendation review
-4. System optimization
+### 2. Status Management
+- Address alerts promptly
+- Update documentation
+- Track changes
+- Monitor resources
 
-## Development
+### 3. Mission Alignment
+- Review content status
+- Check community engagement
+- Monitor implementation
+- Track progress
 
-### Adding Features
-1. Update dashboard template
-2. Add new metrics
-3. Enhance visualizations
-4. Improve interactivity
+## Troubleshooting
 
-### Testing
-1. Metric accuracy
-2. Alert display
-3. Refresh functionality
-4. Data integrity
+### Common Issues
+1. Display Not Updating
+   - Press 'r' to refresh
+   - Check system status
+   - Verify connectivity
+
+2. Missing Data
+   - Check data sources
+   - Verify integrations
+   - Update context
+
+3. Alert Management
+   - Review active alerts
+   - Check status
+   - Take action
 
 ## Support
 
 ### Resources
 - Documentation: /docs
-- Dashboard: /dashboard
-- Logs: /logs
-- Configuration: /config/ai
+- Context: /context
+- Monitoring: /scripts/monitoring
+- Tests: /tests
 
-### Common Issues
-1. Dashboard not updating
-   - Check server status
-   - Verify data sources
-   - Review logs
+### Commands
+```bash
+# Start dashboard
+npm run dashboard
 
-2. Missing metrics
-   - Check data collection
-   - Verify monitoring
-   - Test connections
+# View context
+npm run context:view
 
-3. Alert display issues
-   - Validate alert data
-   - Check formatting
-   - Review templates
+# Run tests
+npm run test:all
+```
 
-## Updates and Maintenance
+## Maintenance
 
-### Version Control
-- Dashboard updates tracked
-- Configuration changes logged
-- Template modifications recorded
+### Regular Tasks
+1. Monitor alerts
+2. Review progress
+3. Update context
+4. Check status
 
-### Backup
-- Regular state backups
-- Configuration backups
-- Template backups
+### Updates
+1. Review changes
+2. Update docs
+3. Run tests
+4. Check integration
 
-## Security
+## Configuration
 
-### Access Control
-- Local access only
-- No sensitive data
-- Metric aggregation
+### Update Intervals
+- Dashboard: 5 minutes
+- Context: 6 hours
+- Alerts: Real-time
+- Tests: On demand
 
-### Data Protection
-- No raw data display
-- Aggregated metrics
-- Sanitized output
+### Display Sections
+- Mission: Top
+- Content: Left
+- Community: Center
+- Technical: Right
 
+## Next Steps
+
+### 1. Implementation
+- Monitor progress
+- Track changes
+- Update status
+- Review alerts
+
+### 2. Content Management
+- Verify sources
+- Track updates
+- Monitor engagement
+- Check quality
+
+### 3. Community Building
+- Track engagement
+- Monitor discussions
+- Support users
+- Build community
+
+Generated: $(date)
