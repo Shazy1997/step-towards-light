@@ -56,7 +56,8 @@
     "context:watch": "watch -n 300 npm run context:update",
     "test:context": "jest tests/context-pipeline/context.test.js",
     "context:periodic": "node scripts/context-pipeline/periodic-update.js",
-    "context:schedule": "watch -n 21600 npm run context:periodic"
+    "context:schedule": "watch -n 21600 npm run context:periodic",
+    "context:view": "node scripts/context-pipeline/context-viewer.js"
   },
   "dependencies": {
     "csurf": "^1.11.0",
@@ -77,6 +78,7 @@
     "autocannon": "^8.0.0",
     "autoprefixer": "^10.4.16",
     "babel-jest": "^29.7.0",
+    "blessed": "^0.1.81",
     "husky": "^9.1.7",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
