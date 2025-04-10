@@ -11,7 +11,14 @@
     "update-progress": "node scripts/update-progress.js",
     "monitor": "node scripts/monitoring/docker-health.js",
     "update-dashboard": "node scripts/update-dashboard.js",
-    "update-all": "npm run update-progress && npm run update-dashboard"
+    "update-all": "npm run update-progress && npm run update-dashboard",
+    "docker:monitor": "node scripts/docker-monitoring/warp-docker-monitor.js",
+    "docker:logs": "scripts/docker-monitoring/warp-commands.sh logs",
+    "docker:stats": "scripts/docker-monitoring/warp-commands.sh stats",
+    "docker:status": "scripts/docker-monitoring/warp-commands.sh status",
+    "docker:events": "scripts/docker-monitoring/warp-commands.sh events",
+    "docker:validate": "scripts/docker-monitoring/warp-commands.sh validate",
+    "docker:all": "scripts/docker-monitoring/warp-commands.sh all"
   },
   "dependencies": {
     "next": "^14.0.0",
