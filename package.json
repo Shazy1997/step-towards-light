@@ -62,7 +62,8 @@
     "dashboard": "node scripts/dashboard.js",
     "dashboard:test": "jest __tests__/dashboard.test.js",
     "status": "node scripts/status.js",
-    "test:status": "jest tests/status.test.js"
+    "test:status": "jest tests/status.test.js",
+    "ai:chat": "./scripts/ai-chat.sh"
   },
   "dependencies": {
     "csurf": "^1.11.0",
