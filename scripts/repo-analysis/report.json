@@ -1,25 +1,27 @@
 {
-  "timestamp": "2025-04-10T03:02:54.967Z",
+  "timestamp": "2025-04-10T03:08:45.411Z",
   "stats": {
-    "files": 46,
-    "directories": 18,
+    "files": 59,
+    "directories": 24,
     "fileTypes": {
-      "": 3,
+      "": 4,
       ".yml": 4,
-      ".md": 9,
-      ".js": 20,
-      ".json": 7,
+      ".md": 12,
+      ".js": 24,
+      ".log": 3,
+      ".json": 8,
       ".tmp": 1,
+      ".html": 1,
       ".sh": 1,
       ".css": 1
     },
     "components": 1,
     "pages": 7,
     "tests": 2,
-    "totalSize": "0.44 MB"
+    "totalSize": "0.91 MB"
   },
   "docker": {
-    "timestamp": "2025-04-10T03:02:54.968Z",
+    "timestamp": "2025-04-10T03:08:45.412Z",
     "docker": {
       "status": "active",
       "version": "Docker version 24.0.6, build ed223bc",
@@ -28,8 +30,8 @@
     "containers": {
       "running": 1,
       "status": {
-        "step-towards-light-monitoring-1": "Exited (1) 2 minutes ago",
-        "step-towards-light-web-1": "Up 2 minutes (healthy)",
+        "step-towards-light-monitoring-1": "Exited (1) 8 minutes ago",
+        "step-towards-light-web-1": "Up 8 minutes (healthy)",
         "homeassistant": "Exited (0) 2 months ago",
         "magical_lichterman": "Exited (255) 3 months ago"
       },
@@ -40,9 +42,9 @@
           "network": "0B / 0B"
         },
         "step-towards-light-web-1": {
-          "cpu": "0.00%",
-          "memory": "45.5MiB / 7.667GiB",
-          "network": "304kB / 24.4kB"
+          "cpu": "0.02%",
+          "memory": "84.46MiB / 7.667GiB",
+          "network": "12.2MB / 715MB"
         },
         "homeassistant": {
           "cpu": "0.00%",
