@@ -18,7 +18,12 @@
     "docker:status": "scripts/docker-monitoring/warp-commands.sh status",
     "docker:events": "scripts/docker-monitoring/warp-commands.sh events",
     "docker:validate": "scripts/docker-monitoring/warp-commands.sh validate",
-    "docker:all": "scripts/docker-monitoring/warp-commands.sh all"
+    "docker:all": "scripts/docker-monitoring/warp-commands.sh all",
+    "e2e": "cypress run",
+    "e2e:open": "cypress open",
+    "test:all": "npm test && npm run e2e",
+    "monitor:load": "node scripts/monitor-load.js",
+    "monitor:production": "npm run monitor:load && npm run update-all"
   },
   "dependencies": {
     "next": "^14.0.0",
@@ -32,6 +37,7 @@
     "@babel/preset-react": "^7.26.3",
     "@testing-library/jest-dom": "^6.1.0",
     "@testing-library/react": "^14.0.0",
+    "autocannon": "^8.0.0",
     "autoprefixer": "^10.4.16",
     "babel-jest": "^29.7.0",
     "identity-obj-proxy": "^3.0.0",
