@@ -53,7 +53,8 @@
     "context:generate": "node scripts/ai/context-manager.js",
     "ai:context": "node scripts/ai/use-context.js",
     "context:update": "node scripts/context-pipeline/context-aggregator.js",
-    "context:watch": "watch -n 300 npm run context:update"
+    "context:watch": "watch -n 300 npm run context:update",
+    "test:context": "jest tests/context-pipeline/context.test.js"
   },
   "dependencies": {
     "csurf": "^1.11.0",
